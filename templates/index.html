@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behavioural Detection</title>
+    <link rel="icon" href="/static/css/assets/Leonardo_Phoenix_Create_a_logo_for_a_project_titled_Behaviour_2-removebg-preview (1).jpg" type="image/x-icon"> <!-- Link to your favicon -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="fixed-window">
+        <nav>
+            <h1 class="title"><img src="/static/css/assets/Leonardo_Phoenix_Create_a_logo_for_a_project_titled_Behaviour_2-removebg-preview (1).png" alt=""></i> Behavioural Detection</h1>
+            <ul>
+                <li><a href="#home" class="nav-link" onclick="showSection('home')"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="#about" class="nav-link" onclick="showSection('about')"><i class="fas fa-info-circle"></i>About</a></li>
+                <li><a href="#team" class="nav-link" onclick="showSection('team')"><i class="fas fa-users"></i>Team</a></li>
+                <li><a href="#contact" class="nav-link" onclick="showSection('contact')"><i class="fas fa-envelope"></i>Contact Us</a></li>
+            </ul>
+        </nav>
+am
+        <div class="hero">
+            <h1>Let’s Begin</h1>
+            <form action="" method="post">
+                <form action="" method="post">
+                    <button type="submit" name="start_camera">
+                        <i class="fa-solid fa-camera" style="margin-right: 8px;"></i> Start Camera
+                    </button>
+                    <button type="submit" name="upload_video">
+                        <i class="fa-solid fa-upload" style="margin-right: 8px;"></i> Upload Video
+                    </button>
+                </form>
+                
+        </div>
+
+        <!-- Content Sections -->
+        <div class="content" id="home">
+            <h2>Home</h2>
+            <p>Welcome to Behavioural Detection, where cutting-edge technology meets innovation in surveillance and artificial intelligence. Our mission is to enhance security and insights through advanced behavioral analysis, providing comprehensive solutions tailored to meet the needs of various industries. With a focus on precision and efficiency, we harness the power of technology to transform data into actionable intelligence. Explore our services and discover how we can help you stay ahead in an ever-evolving landscape</p>
+        </div>
+
+        <div class="content" id="about" style="display: none;">
+            <h2>About Us</h2>
+            <p>At Behavioural Detection, we leverage the power of advanced machine learning models to provide accurate and efficient solutions. Our model has been trained on over [insert number] data points, ensuring a comprehensive understanding of diverse behavioral patterns. With an accuracy rate of [insert accuracy percentage]%, our technology is designed to deliver precise and reliable insights, helping businesses and organizations make informed decisions based on real-time data analysis. We are committed to continual improvement and innovation, ensuring our model evolves with the latest developments in artificial intelligence</p>
+        </div>
+
+        <div class="content" id="team" style="display: none;">
+            <h2>Our Team</h2>
+            <p>Meet our dedicated team behind Behavioural Detection. Kunal, our  web developer, built and designed this website, ensuring a seamless user experience. Usama, our machine learning expert, created the intelligent model that powers our platform. Gagan played a crucial role in solving errors, training the data, and integrating the model into the web browser, handling all backend operations with precision. Lastly, Rajesh contributed significantly by collecting data from various sources, laying the foundation for our model's accuracy and efficiency. Together, our team works collaboratively to deliver cutting-edge solutions in behavioral analysis</p>
+        </div>
+
+        <div class="content" id="contact" style="display: none;">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us for more information or support.</p>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide the hero section
+            const heroSection = document.querySelector('.hero');
+            if (heroSection) {
+                heroSection.style.display = 'none';
+            }
+    
+            // Hide all content sections
+            const sections = document.querySelectorAll('.content');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Show the selected section
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+    
+        // Default to showing the hero section initially
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.hero').style.display = 'block';
+        });
+    </script>
+    
+</body>
+</html>
